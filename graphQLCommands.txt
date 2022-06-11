@@ -1,0 +1,82 @@
+# {
+  # users(first:3){
+  #   data{
+  #     id,
+  #     name
+  #   }
+  # }
+
+  # user(id:20){
+  #   id,
+  #   name,
+  #   email,
+  #   password,
+  #   created_at,
+  #   posts{
+  #     title,
+  #     content
+  #   }
+  # }
+
+  # users(first:3,page:4){
+  #   data{
+  #     id,
+  #     name,
+  #     email,
+  #     email_verified_at
+  #   }
+  #   paginatorInfo{
+  #     hasMorePages,
+  #     count,
+  #     total,
+  #     currentPage
+  #   }
+  # }
+  # posts(first:3,page:2){
+  #   data{
+  #     id,
+  #     title,
+  #     content,
+  #     user{
+  #       name
+  #     }
+  #   }
+  # }
+
+  # post(id:2){
+  #   title,
+  #   content
+  # }
+  # me {
+  #   id
+  #   name
+  #   email
+  #   avatar
+  # }
+# }
+
+# mutation{
+#     # createUser(name:"mohsen",email:"mohsen4@gmail.com",password:"password"){
+#     # 	id,
+#     #   name
+#     # }
+#   # updateUser(id:11,name:"kourosh",password:"password"){
+#   #   name,
+#   #   password
+#   # }
+#   # deleteUser(id:11){
+#   #   name
+#   # }
+#   # upsertUser(id:11,name:"mohsen",email:"mohsen2@gmail.com",password:"password"){
+#   #   id,
+#   #   name,
+#   #   email
+#   # }
+#   }
+# mutation UserLogin($password:String!){
+#   login(email:"mohsen2@gmail.com",password:$password,device:"web")
+# }
+# mutation FileUpload($file:Upload!){
+#   updateUserAvatar(image:$file)
+# }
+

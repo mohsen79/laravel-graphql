@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "2f1fb3ac-6d04-4895-b95b-2104333ae09f",
+		"name": "graphql upload file",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "operations",
+							"value": "{\n    \"query\": \"mutation UpdloadFile($file:Upload!){updateUserAvatar(image:$file,id:11){name}}\"\n}",
+							"type": "text"
+						},
+						{
+							"key": "map",
+							"value": "{\"0\": [\"variables.file\"]}",
+							"type": "text"
+						},
+						{
+							"key": "0",
+							"type": "file",
+							"src": "/home/mohsen/Downloads/vaccine.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
